@@ -1,878 +1,179 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-     <script data-cfasync="false" async type="text/javascript" src="//gc.armfulszostera.com/sOkzygv2zzcZ/150339"></script>
-    <script data-cfasync="false" async type="text/javascript" src="//basionsassay.com/gphYlYxe83cUVK7/150338"></script>
-    <script data-cfasync="false" async type="text/javascript" src="//sg.grubblepuffwig.com/rHJNug7ai4ahBEjS/150335"></script>
-    <meta name="profiton-domain-verification" content="36f2bbe6bfb9a3d3d7183263275c9dffa50aa2c8f52ffb727c4bca3716850deb" />     
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>VIDEY.IT.COM</title>
-
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #0b0b0b;
-  color: #f5f2ed;
-  min-height: 100vh;
-}
-
-/* HEADER */
-
-header {
-  padding: 22px 6%;
-  border-bottom: 1px solid rgba(216,193,154,.18);
-}
-
-.logo {
-  color: #d8c19a;
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: 5px;
-}
-
-/* CONTAINER */
-
-.container {
-  width: min(1100px,92%);
-  margin: auto;
-  padding: 45px 0 70px;
-}
-
-/* TITLE */
-
-.video-heading {
-  text-align: center;
-  margin-bottom: 28px;
-}
-
-.video-heading h1 {
-  font-size: clamp(26px,5vw,46px);
-  font-weight: 500;
-  line-height: 1.2;
-  margin-bottom: 12px;
-}
-
-.video-heading p {
-  color: #aaa39a;
-  font-size: 14px;
-}
-
-/* PLAYER */
-
-.player-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #000;
-  border: 1px solid rgba(216,193,154,.25);
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,.45);
-}
-
-video {
-  width: 100%;
-  height: 100%;
-  display: block;
-  background: #000;
-}
-
-/* PLAYER OVERLAY */
-
-.play-overlay {
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  padding: 25px;
-
-  background: rgba(0,0,0,.88);
-
-  z-index: 5;
-}
-
-.play-overlay.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.overlay-title {
-  color: #d8c19a;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.overlay-text {
-  color: #aaa39a;
-  font-size: 13px;
-  line-height: 1.7;
-  max-width: 500px;
-  margin-bottom: 20px;
-}
-
-/* BUTTONS */
-
-.btn {
-  border: 1px solid #d8c19a;
-  background: transparent;
-  color: #d8c19a;
-
-  padding: 13px 25px;
-
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-
-  cursor: pointer;
-  text-decoration: none;
-
-  transition: .25s ease;
-}
-
-.btn:hover {
-  background: #d8c19a;
-  color: #111;
-}
-
-.btn-play {
-  display: none;
-}
-
-.btn-play.active {
-  display: inline-block;
-}
-
-/* SPONSOR */
-
-.sponsor-note {
-  text-align: center;
-  padding: 22px 10px;
-  color: #777168;
-  font-size: 12px;
-  line-height: 1.6;
-}
-
-.sponsor-note strong {
-  color: #d8c19a;
-}
-
-/* LIST */
-
-.section-title {
-  margin: 35px 0 18px;
-
-  color: #d8c19a;
-
-  font-size: 13px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.video-list {
-  border-top: 1px solid rgba(255,255,255,.08);
-}
-
-.video-item {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-
-  padding: 20px 10px;
-
-  border-bottom: 1px solid rgba(255,255,255,.08);
-
-  cursor: pointer;
-
-  transition: .25s ease;
-}
-
-.video-item:hover {
-  background: rgba(216,193,154,.05);
-  padding-left: 18px;
-}
-
-.video-item.active {
-  background: rgba(216,193,154,.07);
-}
-
-.number {
-  width: 35px;
-  color: #777168;
-  font-size: 13px;
-}
-
-.item-info {
-  flex: 1;
-}
-
-.item-title {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.item-description {
-  color: #817c75;
-  font-size: 12px;
-}
-
-.arrow {
-  color: #d8c19a;
-  font-size: 20px;
-}
-
-/* FOOTER */
-
-footer {
-  text-align: center;
-  padding: 30px 20px;
-
-  border-top: 1px solid rgba(255,255,255,.07);
-
-  color: #66615b;
-  font-size: 12px;
-}
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-  header {
-    padding: 18px 5%;
-  }
-
-  .logo {
-    font-size: 18px;
-    letter-spacing: 4px;
-  }
-
-  .container {
-    width: 94%;
-    padding-top: 30px;
-  }
-
-  .video-heading h1 {
-    font-size: 27px;
-  }
-
-  .video-heading p {
-    font-size: 12px;
-  }
-
-  .overlay-title {
-    font-size: 16px;
-  }
-
-  .overlay-text {
-    font-size: 12px;
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 280px;
-  }
-
-  .video-item {
-    gap: 12px;
-    padding: 17px 5px;
-  }
-
-  .item-title {
-    font-size: 14px;
-  }
-
-  .item-description {
-    font-size: 11px;
-  }
-
-  .number {
-    width: 25px;
-  }
-}
-</style>
+    <meta http-equiv="refresh" content="5;url=https://s.shopee.co.id/qiWB9Q86E">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIDEY - Video Player</title>
+
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #0f0f10;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        .video-card {
+            width: 100%;
+            max-width: 420px;
+            background-color: #18181b;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #27272a;
+            padding: 16px;
+        }
+
+        /* --- HEADER --- */
+        .card-header {
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .brand-title {
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* --- VIDEO PLAYER --- */
+        .video-wrapper {
+            width: 100%;
+            background-color: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            min-height: 220px;
+        }
+
+        .video-js {
+            width: 100% !important;
+            height: 230px !important;
+            border-radius: 10px;
+        }
+
+        .action-area {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* --- TOMBOL MONETAG / SPONSOR --- */
+        .btn-sponsor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 16px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-sponsor:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(245, 158, 11, 0.4);
+        }
+
+        .sub-text {
+            font-size: 11px;
+            color: #a1a1aa;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .btn-shopee {
+            display: block;
+            background-color: #27272a;
+            color: #e4e4e7;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            text-align: center;
+            font-weight: 500;
+            border: 1px solid #3f3f46;
+            transition: background-color 0.2s;
+        }
+
+        .btn-shopee:hover {
+            background-color: #3f3f46;
+        }
+
+        .ad-container {
+            width: 100%;
+            min-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 8px;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">VIDEY.IT.COM</div>
-</header>
-
-
-<main class="container">
-
-  <!-- TITLE -->
-
-  <div class="video-heading">
-
-    <h1 id="mainTitle">
-      Pilih Video
-    </h1>
-
-    <p id="mainDescription">
-      Pilih video dari daftar di bawah.
-    </p>
-
-  </div>
-
-
-  <!-- PLAYER -->
-
-  <div class="player-wrapper">
-
-    <video
-      id="videoPlayer"
-      controls
-      preload="metadata">
-
-      Browser Anda tidak mendukung video HTML5.
-
-    </video>
-
-
-    <!-- OVERLAY -->
-
-    <div
-      id="playOverlay"
-      class="play-overlay">
-
-      <div
-        id="overlayTitle"
-        class="overlay-title">
-
-        Pilih Video
-
-      </div>
-
-
-      <div
-        id="overlayText"
-        class="overlay-text">
-
-        Silakan pilih video terlebih dahulu
-        dari daftar di bawah.
-
-      </div>
-
-
-      <!-- SPONSOR BUTTON -->
-
-      <a
-        id="sponsorButton"
-        class="btn"
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-        style="display:none;">
-
-        Lanjut ke Sponsor
-
-      </a>
-
-
-      <!-- PLAY BUTTON -->
-
-      <button
-        id="playButton"
-        class="btn btn-play">
-
-        ▶ &nbsp; Putar Video
-
-      </button>
-
+<div class="video-card">
+    <div class="card-header">
+        <h1 class="brand-title">VIDEY VIRAL</h1>
     </div>
 
-  </div>
-
-
-  <!-- NOTICE -->
-
-  <div class="sponsor-note">
-
-    <strong>Dukungan untuk VIDEY.IT.COM</strong><br>
-
-    Anda dapat membuka halaman sponsor
-    sebelum menikmati video.
-
-  </div>
-
-
-  <!-- LIST -->
-
-  <div class="section-title">
-
-    Daftar Video
-
-  </div>
-
-
-  <div
-    id="videoList"
-    class="video-list">
-
-  </div>
-
-</main>
-
-
-<footer>
-
-  © 2026 VIORA — All Rights Reserved
-
-</footer>
-
-
-<script>
-
-/*
-==================================================
-DATABASE VIDEO
-==================================================
-
-Tambahkan video baru dengan format:
-
-{
-  title: "Judul Video",
-  description: "Deskripsi video",
-  video: "URL VIDEO",
-  sponsor: "SMARTLINK"
-}
-
-Bisa 10, 20, 100 atau lebih.
-==================================================
-*/
-
-
-const videos = [
-
-  {
-    title: "Judul Video 01",
-    description: "Video pilihan pertama.",
-    video: "ssstwitter.com_1781889433025.mp4",
-    sponsor: "https://outpraygisarme.com/iU7dWqLggd0m9LnU/150341"
-  },
-
-  {
-    title: "Judul Video 02",
-    description: "Video pilihan kedua.",
-    video: "https://www.w3schools.com/html/movie.mp4",
-    sponsor: "https://outpraygisarme.com/iU7dWqLggd0m9LnU/150341"
-  },
-
-  {
-    title: "Judul Video 03",
-    description: "Video pilihan ketiga.",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
-    sponsor: "https://outpraygisarme.com/iU7dWqLggd0m9LnU/150341"
-  },
-
-  {
-    title: "Judul Video 04",
-    description: "Video pilihan keempat.",
-    video: "https://www.w3schools.com/html/movie.mp4",
-    sponsor: "https://outpraygisarme.com/iU7dWqLggd0m9LnU/150341"
-  },
-
-  {
-    title: "Judul Video 05",
-    description: "Video pilihan kelima.",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
-    sponsor: "https://outpraygisarme.com/iU7dWqLggd0m9LnU/150341"
-  },
-
-  {
-    title: "Judul Video 06",
-    description: "Video pilihan keenam.",
-    video: "https://www.w3schools.com/html/movie.mp4",
-    sponsor: "https://outpraygisarme.com/iU7dWqLggd0m9LnU/150341"
-  },
-
-  {
-    title: "Judul Video 07",
-    description: "Video pilihan ketujuh.",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
-    sponsor: "https://outpraygisarme.com/iU7dWqLggd0m9LnU/150341"
-  },
-
-  {
-    title: "Judul Video 08",
-    description: "Video pilihan kedelapan.",
-    video: "https://www.w3schools.com/html/movie.mp4",
-    sponsor: "https://outpraygisarme.com/iU7dWqLggd0m9LnU/150341"
-  },
-
-  {
-    title: "Judul Video 09",
-    description: "Video pilihan kesembilan.",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
-    sponsor: "https://outpraygisarme.com/iU7dWqLggd0m9LnU/150341"
-  },
-
-  {
-    title: "Judul Video 10",
-    description: "Video pilihan kesepuluh.",
-    video: "https://www.w3schools.com/html/movie.mp4",
-    sponsor: "https://outpraygisarme.com/iU7dWqLggd0m9LnU/150341"
-  }
-
-];
-
-
-/*
-==================================================
-ELEMENT
-==================================================
-*/
-
-const list =
-  document.getElementById("videoList");
-
-const video =
-  document.getElementById("videoPlayer");
-
-const overlay =
-  document.getElementById("playOverlay");
-
-const overlayTitle =
-  document.getElementById("overlayTitle");
-
-const overlayText =
-  document.getElementById("overlayText");
-
-const sponsorButton =
-  document.getElementById("sponsorButton");
-
-const playButton =
-  document.getElementById("playButton");
-
-const mainTitle =
-  document.getElementById("mainTitle");
-
-const mainDescription =
-  document.getElementById("mainDescription");
-
-
-let selectedVideo = null;
-
-let sponsorOpened = false;
-
-
-/*
-==================================================
-MEMBUAT DAFTAR VIDEO OTOMATIS
-==================================================
-*/
-
-videos.forEach((item,index) => {
-
-  const element =
-    document.createElement("div");
-
-  element.className =
-    "video-item";
-
-
-  element.innerHTML = `
-
-    <div class="number">
-      ${String(index + 1).padStart(2,"0")}
+    <div class="video-wrapper">
+        <!-- PEMUTAR VIDEO DENGAN IN-STREAM VAST ADS -->
+        <video id="myVideo" class="video-js vjs-default-skin" controls playsinline poster="link-gambar-cover.jpg">
+            <source src="https://github.com/user-attachments/assets/324250c8-1082-41b4-8e5f-0e10cd39a74d" type="video/mp4">
+            Browser Anda tidak mendukung pemutar video ini.
+        </video>
     </div>
 
-    <div class="item-info">
+    <div class="action-area">
+        <a href="https://s.shopee.co.id/9KgzHuhJ60" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-sponsor">
+            🚀 Tonton Rekomendasi Hari Ini
+        </a>
+        
+        <p class="sub-text">
+            Saksikan tayangan menarik lainnya melalui tautan resmi mitra kami.
+        </p>
 
-      <div class="item-title">
-        ${item.title}
-      </div>
+        <a href="https://s.shopee.co.id/9KgzHuhJ60" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-shopee">
+            🛍️ VOUCHER SHOPEE DISKON HINGGA 90% MIN BELANJA 10K
+        </a>
 
-      <div class="item-description">
-        ${item.description}
-      </div>
-
+        <div class="ad-container">
+            <!-- Tempat Banner Tambahan -->
+        </div>
     </div>
+</div>
 
-    <div class="arrow">
-      ›
-    </div>
 
-  `;
-
-
-  element.addEventListener(
-    "click",
-    () => {
-
-      selectVideo(
-        index,
-        element
-      );
-
-    }
-  );
-
-
-  list.appendChild(element);
-
-});
-
-
-/*
-==================================================
-PILIH VIDEO
-==================================================
-*/
-
-function selectVideo(index,element){
-
-  selectedVideo =
-    videos[index];
-
-
-  /*
-   * Reset proses sponsor
-   * setiap memilih video baru.
-   */
-
-  sponsorOpened =
-    false;
-
-
-  /*
-   * Update judul
-   */
-
-  mainTitle.textContent =
-    selectedVideo.title;
-
-  mainDescription.textContent =
-    selectedVideo.description;
-
-
-  /*
-   * Load video
-   */
-
-  video.pause();
-
-  video.src =
-    selectedVideo.video;
-
-  video.load();
-
-
-  /*
-   * Reset overlay
-   */
-
-  overlay.classList.remove(
-    "hidden"
-  );
-
-
-  overlayTitle.textContent =
-    "Dukungan untuk VIORA";
-
-
-  overlayText.textContent =
-    "Jika Anda ingin mendukung website ini, " +
-    "silakan membuka halaman sponsor terlebih dahulu. " +
-    "Setelah selesai, kembali ke halaman ini " +
-    "dan pilih Putar Video.";
-
-
-  /*
-   * Tampilkan sponsor
-   */
-
-  sponsorButton.style.display =
-    "inline-flex";
-
-  sponsorButton.href =
-    selectedVideo.sponsor;
-
-
-  /*
-   * Sembunyikan Play
-   */
-
-  playButton.classList.remove(
-    "active"
-  );
-
-
-  /*
-   * Tandai video aktif
-   */
-
-  document
-    .querySelectorAll(".video-item")
-    .forEach(item => {
-
-      item.classList.remove(
-        "active"
-      );
-
-    });
-
-
-  element.classList.add(
-    "active"
-  );
-
-
-  /*
-   * Scroll ke player
-   */
-
-  window.scrollTo({
-
-    top: 0,
-
-    behavior: "smooth"
-
-  });
-
-}
-
-
-/*
-==================================================
-KETIKA USER MEMBUKA SPONSOR
-==================================================
-*/
-
-sponsorButton.addEventListener(
-  "click",
-  function(){
-
-    /*
-     * Hanya mencatat bahwa tombol
-     * sponsor telah diklik.
-     */
-
-    sponsorOpened =
-      true;
-
-
-    /*
-     * Setelah user kembali ke website,
-     * tombol Play dapat digunakan.
-     */
-
-    setTimeout(() => {
-
-      overlayTitle.textContent =
-        "Terima Kasih";
-
-
-      overlayText.textContent =
-        "Anda dapat kembali ke halaman ini " +
-        "dan memutar video pilihan Anda.";
-
-
-      sponsorButton.style.display =
-        "none";
-
-
-      playButton.classList.add(
-        "active"
-      );
-
-    },100);
-
-  }
-);
-
-
-/*
-==================================================
-PLAY VIDEO
-==================================================
-*/
-
-playButton.addEventListener(
-  "click",
-  function(){
-
-    if(!selectedVideo){
-
-      return;
-
-    }
-
-
-    /*
-     * Video hanya diputar
-     * setelah proses sponsor.
-     */
-
-    if(!sponsorOpened){
-
-      return;
-
-    }
-
-
-    video.play();
-
-
-    overlay.classList.add(
-      "hidden"
-    );
-
-  }
-);
-
-
-/*
-==================================================
-KETIKA VIDEO DI-PAUSE
-==================================================
-*/
-
-video.addEventListener(
-  "pause",
-  function(){
-
-    if(
-      !video.ended &&
-      selectedVideo &&
-      sponsorOpened
-    ){
-
-      overlay.classList.remove(
-        "hidden"
-      );
-
-      overlayTitle.textContent =
-        selectedVideo.title;
-
-      overlayText.textContent =
-        "Tekan tombol di bawah untuk melanjutkan video.";
-
-      sponsorButton.style.display =
-        "none";
-
-      playButton.classList.add(
-        "active"
-      );
-
-    }
-
-  }
-);
-
-</script>
 
 </body>
 </html>
