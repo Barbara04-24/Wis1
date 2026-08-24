@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VIDEY21</title>
+<title>VIORA</title>
 
 <style>
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -61,30 +62,32 @@ header {
   font-size: 14px;
 }
 
-/* PLAYER */
+/* LINK BOX */
 
 .player-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  min-height: 330px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background: #000;
+
   border: 1px solid rgba(216,193,154,.25);
+
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,.45);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.45);
 }
 
-video {
-  width: 100%;
-  height: 100%;
-  display: block;
-  background: #000;
-}
-
-/* PLAYER OVERLAY */
+/* OVERLAY */
 
 .play-overlay {
-  position: absolute;
-  inset: 0;
+  width: 100%;
+  min-height: 330px;
 
   display: flex;
   flex-direction: column;
@@ -92,11 +95,12 @@ video {
   align-items: center;
 
   text-align: center;
-  padding: 25px;
+
+  padding: 35px 25px;
 
   background: rgba(0,0,0,.88);
 
-  z-index: 5;
+  transition: .3s ease;
 }
 
 .play-overlay.hidden {
@@ -104,34 +108,52 @@ video {
   pointer-events: none;
 }
 
+/* OVERLAY TEXT */
+
 .overlay-title {
   color: #d8c19a;
-  font-size: 18px;
-  margin-bottom: 10px;
+
+  font-size: 20px;
+
+  margin-bottom: 12px;
 }
 
 .overlay-text {
   color: #aaa39a;
+
   font-size: 13px;
+
   line-height: 1.7;
-  max-width: 500px;
-  margin-bottom: 20px;
+
+  max-width: 520px;
+
+  margin-bottom: 25px;
 }
 
-/* BUTTONS */
+/* BUTTON */
 
 .btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
   border: 1px solid #d8c19a;
+
   background: transparent;
+
   color: #d8c19a;
 
   padding: 13px 25px;
 
   font-size: 12px;
+
   letter-spacing: 1.5px;
+
   text-transform: uppercase;
 
   cursor: pointer;
+
   text-decoration: none;
 
   transition: .25s ease;
@@ -139,24 +161,31 @@ video {
 
 .btn:hover {
   background: #d8c19a;
+
   color: #111;
 }
+
+/* PLAY / TARGET BUTTON */
 
 .btn-play {
   display: none;
 }
 
 .btn-play.active {
-  display: inline-block;
+  display: inline-flex;
 }
 
 /* SPONSOR */
 
 .sponsor-note {
   text-align: center;
+
   padding: 22px 10px;
+
   color: #777168;
+
   font-size: 12px;
+
   line-height: 1.6;
 }
 
@@ -164,7 +193,7 @@ video {
   color: #d8c19a;
 }
 
-/* LIST */
+/* LIST TITLE */
 
 .section-title {
   margin: 35px 0 18px;
@@ -172,22 +201,32 @@ video {
   color: #d8c19a;
 
   font-size: 13px;
+
   letter-spacing: 3px;
+
   text-transform: uppercase;
 }
 
+/* LIST */
+
 .video-list {
-  border-top: 1px solid rgba(255,255,255,.08);
+  border-top:
+    1px solid rgba(255,255,255,.08);
 }
+
+/* ITEM */
 
 .video-item {
   display: flex;
+
   align-items: center;
+
   gap: 18px;
 
   padding: 20px 10px;
 
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  border-bottom:
+    1px solid rgba(255,255,255,.08);
 
   cursor: pointer;
 
@@ -195,19 +234,28 @@ video {
 }
 
 .video-item:hover {
-  background: rgba(216,193,154,.05);
+  background:
+    rgba(216,193,154,.05);
+
   padding-left: 18px;
 }
 
 .video-item.active {
-  background: rgba(216,193,154,.07);
+  background:
+    rgba(216,193,154,.07);
 }
+
+/* NUMBER */
 
 .number {
   width: 35px;
+
   color: #777168;
+
   font-size: 13px;
 }
+
+/* INFO */
 
 .item-info {
   flex: 1;
@@ -215,16 +263,21 @@ video {
 
 .item-title {
   font-size: 16px;
+
   margin-bottom: 5px;
 }
 
 .item-description {
   color: #817c75;
+
   font-size: 12px;
 }
 
+/* ARROW */
+
 .arrow {
   color: #d8c19a;
+
   font-size: 20px;
 }
 
@@ -232,11 +285,14 @@ video {
 
 footer {
   text-align: center;
+
   padding: 30px 20px;
 
-  border-top: 1px solid rgba(255,255,255,.07);
+  border-top:
+    1px solid rgba(255,255,255,.07);
 
   color: #66615b;
+
   font-size: 12px;
 }
 
@@ -250,11 +306,13 @@ footer {
 
   .logo {
     font-size: 18px;
+
     letter-spacing: 4px;
   }
 
   .container {
     width: 94%;
+
     padding-top: 30px;
   }
 
@@ -264,6 +322,16 @@ footer {
 
   .video-heading p {
     font-size: 12px;
+  }
+
+  .player-wrapper {
+    min-height: 300px;
+  }
+
+  .play-overlay {
+    min-height: 300px;
+
+    padding: 25px 18px;
   }
 
   .overlay-title {
@@ -276,11 +344,13 @@ footer {
 
   .btn {
     width: 100%;
+
     max-width: 280px;
   }
 
   .video-item {
     gap: 12px;
+
     padding: 17px 5px;
   }
 
@@ -295,59 +365,57 @@ footer {
   .number {
     width: 25px;
   }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
+
 <header>
-  <div class="logo">VIORA</div>
+
+  <div class="logo">
+    VIORA
+  </div>
+
 </header>
 
 
 <main class="container">
+
 
   <!-- TITLE -->
 
   <div class="video-heading">
 
     <h1 id="mainTitle">
-      Pilih Video
+      Pilih Link
     </h1>
 
     <p id="mainDescription">
-      Pilih video dari daftar di bawah.
+      Pilih halaman dari daftar di bawah.
     </p>
 
   </div>
 
 
-  <!-- PLAYER -->
+  <!-- LINK PLAYER -->
 
   <div class="player-wrapper">
-
-    <video
-      id="videoPlayer"
-      controls
-      preload="metadata">
-
-      Browser Anda tidak mendukung video HTML5.
-
-    </video>
-
-
-    <!-- OVERLAY -->
 
     <div
       id="playOverlay"
       class="play-overlay">
 
+
       <div
         id="overlayTitle"
         class="overlay-title">
 
-        Pilih Video
+        Pilih Link
 
       </div>
 
@@ -356,8 +424,8 @@ footer {
         id="overlayText"
         class="overlay-text">
 
-        Silakan pilih video terlebih dahulu
-        dari daftar di bawah.
+        Silakan pilih halaman dari daftar
+        di bawah untuk melanjutkan.
 
       </div>
 
@@ -369,23 +437,23 @@ footer {
         class="btn"
         href="#"
         target="_blank"
-        rel="noopener noreferrer"
-        style="display:none;">
+        rel="noopener noreferrer">
 
         Lanjut ke Sponsor
 
       </a>
 
 
-      <!-- PLAY BUTTON -->
+      <!-- TARGET BUTTON -->
 
       <button
         id="playButton"
         class="btn btn-play">
 
-        ▶ &nbsp; Putar Video
+        ▶ &nbsp; Lanjut ke Halaman
 
       </button>
+
 
     </div>
 
@@ -396,10 +464,12 @@ footer {
 
   <div class="sponsor-note">
 
-    <strong>Dukungan untuk VIDEY21</strong><br>
+    <strong>Dukungan untuk VIORA</strong>
+    <br>
 
-    Anda dapat membuka halaman sponsor
-    sebelum menikmati video.
+    Silakan membuka halaman sponsor
+    terlebih dahulu sebelum melanjutkan
+    ke halaman pilihan Anda.
 
   </div>
 
@@ -408,7 +478,7 @@ footer {
 
   <div class="section-title">
 
-    Daftar Video
+    Daftar Link
 
   </div>
 
@@ -418,6 +488,7 @@ footer {
     class="video-list">
 
   </div>
+
 
 </main>
 
@@ -429,96 +500,90 @@ footer {
 </footer>
 
 
+
 <script>
 
 /*
 ==================================================
-DATABASE VIDEO
+DATABASE LINK
 ==================================================
 
-Tambahkan video baru dengan format:
+target  = LINK HALAMAN TUJUAN
+sponsor = LINK SPONSOR
 
-{
-  title: "Judul Video",
-  description: "Deskripsi video",
-  video: "URL VIDEO",
-  sponsor: "SMARTLINK"
-}
-
-Bisa 10, 20, 100 atau lebih.
+Ganti LINK-TUJUAN dengan link yang kamu inginkan.
 ==================================================
 */
 
-
-const videos = [
+const links = [
 
   {
     title: "Judul Video 01",
     description: "Video pilihan pertama.",
-    video: "https://h0tvidey.github.io/EGA10/video-01.mp4",
+    target: "https://h0tvidey.github.io/EGA1/",
     sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
   },
 
   {
     title: "Judul Video 02",
     description: "Video pilihan kedua.",
-    video: "https://h0tvidey.github.io/EGA9/",
+    target: "https://h0tvidey.github.io/EGA10/",
     sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
   },
 
   {
     title: "Judul Video 03",
     description: "Video pilihan ketiga.",
-    video: "https://h0tvidey.github.io/EGA8/",
+    target: "https://h0tvidey.github.io/EGA2/",
     sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
   },
 
   {
     title: "Judul Video 04",
     description: "Video pilihan keempat.",
-    video: "https://h0tvidey.github.io/EGA7/",
+    target: "https://h0tvidey.github.io/EGA3/",
     sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
   },
 
   {
     title: "Judul Video 05",
     description: "Video pilihan kelima.",
-    video: "https://h0tvidey.github.io/EGA6/",
+    target: "https://h0tvidey.github.io/EGA4/",
     sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
   },
 
   {
     title: "Judul Video 06",
     description: "Video pilihan keenam.",
-    video: "https://h0tvidey.github.io/EGA5/",
+    target: "https://h0tvidey.github.io/EGA5/",
     sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
   },
 
   {
     title: "Judul Video 07",
     description: "Video pilihan ketujuh.",
-    video: "https://h0tvidey.github.io/EGA4/",
+    target: "https://h0tvidey.github.io/EGA6/",
     sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
   },
 
   {
     title: "Judul Video 08",
     description: "Video pilihan kedelapan.",
-    video: "https://h0tvidey.github.io/EGA3/",
+    target: "https://h0tvidey.github.io/EGA7/",
     sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
   },
 
   {
     title: "Judul Video 09",
     description: "Video pilihan kesembilan.",
-    video: "https://h0tvidey.github.io/EGA1/",
+    target: "https://h0tvidey.github.io/EGA8/",
     sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
   },
 
   {
     title: "Judul Video 10",
     description: "Video pilihan kesepuluh.",
-    video: "https://h0tvidey.github.io/EGA2/",
+    target: "https://h0tvidey.github.io/EGA9/",
     sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
   }
 
@@ -533,9 +598,6 @@ ELEMENT
 
 const list =
   document.getElementById("videoList");
-
-const video =
-  document.getElementById("videoPlayer");
 
 const overlay =
   document.getElementById("playOverlay");
@@ -559,18 +621,18 @@ const mainDescription =
   document.getElementById("mainDescription");
 
 
-let selectedVideo = null;
+let selectedLink = null;
 
 let sponsorOpened = false;
 
 
 /*
 ==================================================
-MEMBUAT DAFTAR VIDEO OTOMATIS
+MEMBUAT DAFTAR LINK
 ==================================================
 */
 
-videos.forEach((item,index) => {
+links.forEach((item, index) => {
 
   const element =
     document.createElement("div");
@@ -582,7 +644,7 @@ videos.forEach((item,index) => {
   element.innerHTML = `
 
     <div class="number">
-      ${String(index + 1).padStart(2,"0")}
+      ${String(index + 1).padStart(2, "0")}
     </div>
 
     <div class="item-info">
@@ -606,9 +668,9 @@ videos.forEach((item,index) => {
 
   element.addEventListener(
     "click",
-    () => {
+    function(){
 
-      selectVideo(
+      selectLink(
         index,
         element
       );
@@ -624,20 +686,15 @@ videos.forEach((item,index) => {
 
 /*
 ==================================================
-PILIH VIDEO
+PILIH LINK
 ==================================================
 */
 
-function selectVideo(index,element){
+function selectLink(index, element){
 
-  selectedVideo =
-    videos[index];
+  selectedLink =
+    links[index];
 
-
-  /*
-   * Reset proses sponsor
-   * setiap memilih video baru.
-   */
 
   sponsorOpened =
     false;
@@ -648,22 +705,10 @@ function selectVideo(index,element){
    */
 
   mainTitle.textContent =
-    selectedVideo.title;
+    selectedLink.title;
 
   mainDescription.textContent =
-    selectedVideo.description;
-
-
-  /*
-   * Load video
-   */
-
-  video.pause();
-
-  video.src =
-    selectedVideo.video;
-
-  video.load();
+    selectedLink.description;
 
 
   /*
@@ -680,25 +725,24 @@ function selectVideo(index,element){
 
 
   overlayText.textContent =
-    "Jika Anda ingin mendukung website ini, " +
-    "silakan membuka halaman sponsor terlebih dahulu. " +
-    "Setelah selesai, kembali ke halaman ini " +
-    "dan pilih Putar Video.";
+    "Silakan membuka halaman sponsor " +
+    "terlebih dahulu. Setelah selesai, " +
+    "kembali ke halaman ini untuk melanjutkan.";
 
 
   /*
-   * Tampilkan sponsor
+   * Sponsor
    */
+
+  sponsorButton.href =
+    selectedLink.sponsor;
 
   sponsorButton.style.display =
     "inline-flex";
 
-  sponsorButton.href =
-    selectedVideo.sponsor;
-
 
   /*
-   * Sembunyikan Play
+   * Sembunyikan tombol tujuan
    */
 
   playButton.classList.remove(
@@ -707,7 +751,7 @@ function selectVideo(index,element){
 
 
   /*
-   * Tandai video aktif
+   * Active item
    */
 
   document
@@ -727,7 +771,7 @@ function selectVideo(index,element){
 
 
   /*
-   * Scroll ke player
+   * Scroll ke atas
    */
 
   window.scrollTo({
@@ -743,17 +787,24 @@ function selectVideo(index,element){
 
 /*
 ==================================================
-KETIKA USER MEMBUKA SPONSOR
+BUKA SPONSOR
 ==================================================
 */
 
 sponsorButton.addEventListener(
   "click",
-  function(){
+  function(event){
+
+    event.preventDefault();
+
+
+    if(!selectedLink){
+      return;
+    }
+
 
     /*
-     * Hanya mencatat bahwa tombol
-     * sponsor telah diklik.
+     * Tandai sponsor sudah dibuka
      */
 
     sponsorOpened =
@@ -761,69 +812,35 @@ sponsorButton.addEventListener(
 
 
     /*
-     * Setelah user kembali ke website,
-     * tombol Play dapat digunakan.
+     * Buka sponsor di tab baru
      */
 
-    setTimeout(() => {
-
-      overlayTitle.textContent =
-        "Terima Kasih";
-
-
-      overlayText.textContent =
-        "Anda dapat kembali ke halaman ini " +
-        "dan memutar video pilihan Anda.";
-
-
-      sponsorButton.style.display =
-        "none";
-
-
-      playButton.classList.add(
-        "active"
-      );
-
-    },100);
-
-  }
-);
-
-
-/*
-==================================================
-PLAY VIDEO
-==================================================
-*/
-
-playButton.addEventListener(
-  "click",
-  function(){
-
-    if(!selectedVideo){
-
-      return;
-
-    }
+    window.open(
+      selectedLink.sponsor,
+      "_blank",
+      "noopener,noreferrer"
+    );
 
 
     /*
-     * Video hanya diputar
-     * setelah proses sponsor.
+     * Tampilkan tombol tujuan
      */
 
-    if(!sponsorOpened){
-
-      return;
-
-    }
+    overlayTitle.textContent =
+      "Terima Kasih";
 
 
-    video.play();
+    overlayText.textContent =
+      "Sponsor telah dibuka. " +
+      "Silakan lanjut ke halaman tujuan.";
 
 
-    overlay.classList.add(
-      "hidden"
+    sponsorButton.style.display =
+      "none";
+
+
+    playButton.classList.add(
+      "active"
     );
 
   }
@@ -832,38 +849,33 @@ playButton.addEventListener(
 
 /*
 ==================================================
-KETIKA VIDEO DI-PAUSE
+BUKA HALAMAN TUJUAN
 ==================================================
 */
 
-video.addEventListener(
-  "pause",
+playButton.addEventListener(
+  "click",
   function(){
 
-    if(
-      !video.ended &&
-      selectedVideo &&
-      sponsorOpened
-    ){
-
-      overlay.classList.remove(
-        "hidden"
-      );
-
-      overlayTitle.textContent =
-        selectedVideo.title;
-
-      overlayText.textContent =
-        "Tekan tombol di bawah untuk melanjutkan video.";
-
-      sponsorButton.style.display =
-        "none";
-
-      playButton.classList.add(
-        "active"
-      );
-
+    if(!selectedLink){
+      return;
     }
+
+
+    if(!sponsorOpened){
+      return;
+    }
+
+
+    /*
+     * Buka target di tab baru
+     */
+
+    window.open(
+      selectedLink.target,
+      "_blank",
+      "noopener,noreferrer"
+    );
 
   }
 );
