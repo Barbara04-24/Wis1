@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-      <script data-cfasync="false" async type="text/javascript" src="//gc.armfulszostera.com/sOkzygv2zzcZ/150339"></script>
+     <script data-cfasync="false" async type="text/javascript" src="//gc.armfulszostera.com/sOkzygv2zzcZ/150339"></script>
     <script data-cfasync="false" async type="text/javascript" src="//basionsassay.com/gphYlYxe83cUVK7/150338"></script>
     <script data-cfasync="false" async type="text/javascript" src="//sg.grubblepuffwig.com/rHJNug7ai4ahBEjS/150335"></script>
-    <meta name="profiton-domain-verification" content="36f2bbe6bfb9a3d3d7183263275c9dffa50aa2c8f52ffb727c4bca3716850deb" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="profiton-domain-verification" content="36f2bbe6bfb9a3d3d7183263275c9dffa50aa2c8f52ffb727c4bca3716850deb" />     
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>VIORA</title>
+<title>VIORA — Video</title>
 
 <style>
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -68,32 +65,30 @@ header {
   font-size: 14px;
 }
 
-/* LINK BOX */
+/* PLAYER */
 
 .player-wrapper {
   position: relative;
   width: 100%;
-  min-height: 330px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  aspect-ratio: 16 / 9;
   background: #000;
-
   border: 1px solid rgba(216,193,154,.25);
-
   overflow: hidden;
-
-  box-shadow:
-    0 20px 60px rgba(0,0,0,.45);
+  box-shadow: 0 20px 60px rgba(0,0,0,.45);
 }
 
-/* OVERLAY */
+video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #000;
+}
+
+/* PLAYER OVERLAY */
 
 .play-overlay {
-  width: 100%;
-  min-height: 330px;
+  position: absolute;
+  inset: 0;
 
   display: flex;
   flex-direction: column;
@@ -101,12 +96,11 @@ header {
   align-items: center;
 
   text-align: center;
-
-  padding: 35px 25px;
+  padding: 25px;
 
   background: rgba(0,0,0,.88);
 
-  transition: .3s ease;
+  z-index: 5;
 }
 
 .play-overlay.hidden {
@@ -114,52 +108,34 @@ header {
   pointer-events: none;
 }
 
-/* OVERLAY TEXT */
-
 .overlay-title {
   color: #d8c19a;
-
-  font-size: 20px;
-
-  margin-bottom: 12px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .overlay-text {
   color: #aaa39a;
-
   font-size: 13px;
-
   line-height: 1.7;
-
-  max-width: 520px;
-
-  margin-bottom: 25px;
+  max-width: 500px;
+  margin-bottom: 20px;
 }
 
-/* BUTTON */
+/* BUTTONS */
 
 .btn {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
   border: 1px solid #d8c19a;
-
   background: transparent;
-
   color: #d8c19a;
 
   padding: 13px 25px;
 
   font-size: 12px;
-
   letter-spacing: 1.5px;
-
   text-transform: uppercase;
 
   cursor: pointer;
-
   text-decoration: none;
 
   transition: .25s ease;
@@ -167,31 +143,24 @@ header {
 
 .btn:hover {
   background: #d8c19a;
-
   color: #111;
 }
-
-/* PLAY / TARGET BUTTON */
 
 .btn-play {
   display: none;
 }
 
 .btn-play.active {
-  display: inline-flex;
+  display: inline-block;
 }
 
 /* SPONSOR */
 
 .sponsor-note {
   text-align: center;
-
   padding: 22px 10px;
-
   color: #777168;
-
   font-size: 12px;
-
   line-height: 1.6;
 }
 
@@ -199,7 +168,7 @@ header {
   color: #d8c19a;
 }
 
-/* LIST TITLE */
+/* LIST */
 
 .section-title {
   margin: 35px 0 18px;
@@ -207,32 +176,22 @@ header {
   color: #d8c19a;
 
   font-size: 13px;
-
   letter-spacing: 3px;
-
   text-transform: uppercase;
 }
 
-/* LIST */
-
 .video-list {
-  border-top:
-    1px solid rgba(255,255,255,.08);
+  border-top: 1px solid rgba(255,255,255,.08);
 }
-
-/* ITEM */
 
 .video-item {
   display: flex;
-
   align-items: center;
-
   gap: 18px;
 
   padding: 20px 10px;
 
-  border-bottom:
-    1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 
   cursor: pointer;
 
@@ -240,28 +199,19 @@ header {
 }
 
 .video-item:hover {
-  background:
-    rgba(216,193,154,.05);
-
+  background: rgba(216,193,154,.05);
   padding-left: 18px;
 }
 
 .video-item.active {
-  background:
-    rgba(216,193,154,.07);
+  background: rgba(216,193,154,.07);
 }
-
-/* NUMBER */
 
 .number {
   width: 35px;
-
   color: #777168;
-
   font-size: 13px;
 }
-
-/* INFO */
 
 .item-info {
   flex: 1;
@@ -269,21 +219,16 @@ header {
 
 .item-title {
   font-size: 16px;
-
   margin-bottom: 5px;
 }
 
 .item-description {
   color: #817c75;
-
   font-size: 12px;
 }
 
-/* ARROW */
-
 .arrow {
   color: #d8c19a;
-
   font-size: 20px;
 }
 
@@ -291,14 +236,11 @@ header {
 
 footer {
   text-align: center;
-
   padding: 30px 20px;
 
-  border-top:
-    1px solid rgba(255,255,255,.07);
+  border-top: 1px solid rgba(255,255,255,.07);
 
   color: #66615b;
-
   font-size: 12px;
 }
 
@@ -312,13 +254,11 @@ footer {
 
   .logo {
     font-size: 18px;
-
     letter-spacing: 4px;
   }
 
   .container {
     width: 94%;
-
     padding-top: 30px;
   }
 
@@ -328,16 +268,6 @@ footer {
 
   .video-heading p {
     font-size: 12px;
-  }
-
-  .player-wrapper {
-    min-height: 300px;
-  }
-
-  .play-overlay {
-    min-height: 300px;
-
-    padding: 25px 18px;
   }
 
   .overlay-title {
@@ -350,13 +280,11 @@ footer {
 
   .btn {
     width: 100%;
-
     max-width: 280px;
   }
 
   .video-item {
     gap: 12px;
-
     padding: 17px 5px;
   }
 
@@ -371,57 +299,59 @@ footer {
   .number {
     width: 25px;
   }
-
 }
-
 </style>
 </head>
 
-
 <body>
 
-
 <header>
-
-  <div class="logo">
-    VIORA
-  </div>
-
+  <div class="logo">VIORA</div>
 </header>
 
 
 <main class="container">
-
 
   <!-- TITLE -->
 
   <div class="video-heading">
 
     <h1 id="mainTitle">
-      Pilih Link
+      Pilih Video
     </h1>
 
     <p id="mainDescription">
-      Pilih halaman dari daftar di bawah.
+      Pilih video dari daftar di bawah.
     </p>
 
   </div>
 
 
-  <!-- LINK PLAYER -->
+  <!-- PLAYER -->
 
   <div class="player-wrapper">
+
+    <video
+      id="videoPlayer"
+      controls
+      preload="metadata">
+
+      Browser Anda tidak mendukung video HTML5.
+
+    </video>
+
+
+    <!-- OVERLAY -->
 
     <div
       id="playOverlay"
       class="play-overlay">
 
-
       <div
         id="overlayTitle"
         class="overlay-title">
 
-        Pilih Link
+        Pilih Video
 
       </div>
 
@@ -430,8 +360,8 @@ footer {
         id="overlayText"
         class="overlay-text">
 
-        Silakan pilih halaman dari daftar
-        di bawah untuk melanjutkan.
+        Silakan pilih video terlebih dahulu
+        dari daftar di bawah.
 
       </div>
 
@@ -443,23 +373,23 @@ footer {
         class="btn"
         href="#"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+        style="display:none;">
 
         Lanjut ke Sponsor
 
       </a>
 
 
-      <!-- TARGET BUTTON -->
+      <!-- PLAY BUTTON -->
 
       <button
         id="playButton"
         class="btn btn-play">
 
-        ▶ &nbsp; Lanjut ke Halaman
+        ▶ &nbsp; Putar Video
 
       </button>
-
 
     </div>
 
@@ -470,12 +400,10 @@ footer {
 
   <div class="sponsor-note">
 
-    <strong>Dukungan untuk VIORA</strong>
-    <br>
+    <strong>Dukungan untuk VIORA</strong><br>
 
-    Silakan membuka halaman sponsor
-    terlebih dahulu sebelum melanjutkan
-    ke halaman pilihan Anda.
+    Anda dapat membuka halaman sponsor
+    sebelum menikmati video.
 
   </div>
 
@@ -484,7 +412,7 @@ footer {
 
   <div class="section-title">
 
-    Daftar Link
+    Daftar Video
 
   </div>
 
@@ -494,7 +422,6 @@ footer {
     class="video-list">
 
   </div>
-
 
 </main>
 
@@ -506,91 +433,97 @@ footer {
 </footer>
 
 
-
 <script>
 
 /*
 ==================================================
-DATABASE LINK
+DATABASE VIDEO
 ==================================================
 
-target  = LINK HALAMAN TUJUAN
-sponsor = LINK SPONSOR
+Tambahkan video baru dengan format:
 
-Ganti LINK-TUJUAN dengan link yang kamu inginkan.
+{
+  title: "Judul Video",
+  description: "Deskripsi video",
+  video: "URL VIDEO",
+  sponsor: "SMARTLINK"
+}
+
+Bisa 10, 20, 100 atau lebih.
 ==================================================
 */
 
-const links = [
+
+const videos = [
 
   {
     title: "Judul Video 01",
     description: "Video pilihan pertama.",
-    target: "https://h0tvidey.github.io/EGA1/",
-    sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    sponsor: "SMARTLINK_PROFITON_01"
   },
 
   {
     title: "Judul Video 02",
     description: "Video pilihan kedua.",
-    target: "https://h0tvidey.github.io/EGA10/",
-    sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
+    video: "https://www.w3schools.com/html/movie.mp4",
+    sponsor: "SMARTLINK_PROFITON_02"
   },
 
   {
     title: "Judul Video 03",
     description: "Video pilihan ketiga.",
-    target: "https://h0tvidey.github.io/EGA2/",
-    sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    sponsor: "SMARTLINK_PROFITON_03"
   },
 
   {
     title: "Judul Video 04",
     description: "Video pilihan keempat.",
-    target: "https://h0tvidey.github.io/EGA3/",
-    sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
+    video: "https://www.w3schools.com/html/movie.mp4",
+    sponsor: "SMARTLINK_PROFITON_04"
   },
 
   {
     title: "Judul Video 05",
     description: "Video pilihan kelima.",
-    target: "https://h0tvidey.github.io/EGA4/",
-    sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    sponsor: "SMARTLINK_PROFITON_05"
   },
 
   {
     title: "Judul Video 06",
     description: "Video pilihan keenam.",
-    target: "https://h0tvidey.github.io/EGA5/",
-    sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
+    video: "https://www.w3schools.com/html/movie.mp4",
+    sponsor: "SMARTLINK_PROFITON_06"
   },
 
   {
     title: "Judul Video 07",
     description: "Video pilihan ketujuh.",
-    target: "https://h0tvidey.github.io/EGA6/",
-    sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    sponsor: "SMARTLINK_PROFITON_07"
   },
 
   {
     title: "Judul Video 08",
     description: "Video pilihan kedelapan.",
-    target: "https://h0tvidey.github.io/EGA7/",
-    sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
+    video: "https://www.w3schools.com/html/movie.mp4",
+    sponsor: "SMARTLINK_PROFITON_08"
   },
 
   {
     title: "Judul Video 09",
     description: "Video pilihan kesembilan.",
-    target: "https://h0tvidey.github.io/EGA8/",
-    sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
+    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    sponsor: "SMARTLINK_PROFITON_09"
   },
 
   {
     title: "Judul Video 10",
     description: "Video pilihan kesepuluh.",
-    target: "https://h0tvidey.github.io/EGA9/",
-    sponsor: "https://qq.reswearstamper.com/iOKJ3gKDlH2BM/150255"
+    video: "https://www.w3schools.com/html/movie.mp4",
+    sponsor: "SMARTLINK_PROFITON_10"
   }
 
 ];
@@ -604,6 +537,9 @@ ELEMENT
 
 const list =
   document.getElementById("videoList");
+
+const video =
+  document.getElementById("videoPlayer");
 
 const overlay =
   document.getElementById("playOverlay");
@@ -627,18 +563,18 @@ const mainDescription =
   document.getElementById("mainDescription");
 
 
-let selectedLink = null;
+let selectedVideo = null;
 
 let sponsorOpened = false;
 
 
 /*
 ==================================================
-MEMBUAT DAFTAR LINK
+MEMBUAT DAFTAR VIDEO OTOMATIS
 ==================================================
 */
 
-links.forEach((item, index) => {
+videos.forEach((item,index) => {
 
   const element =
     document.createElement("div");
@@ -650,7 +586,7 @@ links.forEach((item, index) => {
   element.innerHTML = `
 
     <div class="number">
-      ${String(index + 1).padStart(2, "0")}
+      ${String(index + 1).padStart(2,"0")}
     </div>
 
     <div class="item-info">
@@ -674,9 +610,9 @@ links.forEach((item, index) => {
 
   element.addEventListener(
     "click",
-    function(){
+    () => {
 
-      selectLink(
+      selectVideo(
         index,
         element
       );
@@ -692,15 +628,20 @@ links.forEach((item, index) => {
 
 /*
 ==================================================
-PILIH LINK
+PILIH VIDEO
 ==================================================
 */
 
-function selectLink(index, element){
+function selectVideo(index,element){
 
-  selectedLink =
-    links[index];
+  selectedVideo =
+    videos[index];
 
+
+  /*
+   * Reset proses sponsor
+   * setiap memilih video baru.
+   */
 
   sponsorOpened =
     false;
@@ -711,10 +652,22 @@ function selectLink(index, element){
    */
 
   mainTitle.textContent =
-    selectedLink.title;
+    selectedVideo.title;
 
   mainDescription.textContent =
-    selectedLink.description;
+    selectedVideo.description;
+
+
+  /*
+   * Load video
+   */
+
+  video.pause();
+
+  video.src =
+    selectedVideo.video;
+
+  video.load();
 
 
   /*
@@ -731,24 +684,25 @@ function selectLink(index, element){
 
 
   overlayText.textContent =
-    "Silakan membuka halaman sponsor " +
-    "terlebih dahulu. Setelah selesai, " +
-    "kembali ke halaman ini untuk melanjutkan.";
+    "Jika Anda ingin mendukung website ini, " +
+    "silakan membuka halaman sponsor terlebih dahulu. " +
+    "Setelah selesai, kembali ke halaman ini " +
+    "dan pilih Putar Video.";
 
 
   /*
-   * Sponsor
+   * Tampilkan sponsor
    */
-
-  sponsorButton.href =
-    selectedLink.sponsor;
 
   sponsorButton.style.display =
     "inline-flex";
 
+  sponsorButton.href =
+    selectedVideo.sponsor;
+
 
   /*
-   * Sembunyikan tombol tujuan
+   * Sembunyikan Play
    */
 
   playButton.classList.remove(
@@ -757,7 +711,7 @@ function selectLink(index, element){
 
 
   /*
-   * Active item
+   * Tandai video aktif
    */
 
   document
@@ -777,7 +731,7 @@ function selectLink(index, element){
 
 
   /*
-   * Scroll ke atas
+   * Scroll ke player
    */
 
   window.scrollTo({
@@ -793,24 +747,17 @@ function selectLink(index, element){
 
 /*
 ==================================================
-BUKA SPONSOR
+KETIKA USER MEMBUKA SPONSOR
 ==================================================
 */
 
 sponsorButton.addEventListener(
   "click",
-  function(event){
-
-    event.preventDefault();
-
-
-    if(!selectedLink){
-      return;
-    }
-
+  function(){
 
     /*
-     * Tandai sponsor sudah dibuka
+     * Hanya mencatat bahwa tombol
+     * sponsor telah diklik.
      */
 
     sponsorOpened =
@@ -818,35 +765,69 @@ sponsorButton.addEventListener(
 
 
     /*
-     * Buka sponsor di tab baru
+     * Setelah user kembali ke website,
+     * tombol Play dapat digunakan.
      */
 
-    window.open(
-      selectedLink.sponsor,
-      "_blank",
-      "noopener,noreferrer"
-    );
+    setTimeout(() => {
+
+      overlayTitle.textContent =
+        "Terima Kasih";
+
+
+      overlayText.textContent =
+        "Anda dapat kembali ke halaman ini " +
+        "dan memutar video pilihan Anda.";
+
+
+      sponsorButton.style.display =
+        "none";
+
+
+      playButton.classList.add(
+        "active"
+      );
+
+    },100);
+
+  }
+);
+
+
+/*
+==================================================
+PLAY VIDEO
+==================================================
+*/
+
+playButton.addEventListener(
+  "click",
+  function(){
+
+    if(!selectedVideo){
+
+      return;
+
+    }
 
 
     /*
-     * Tampilkan tombol tujuan
+     * Video hanya diputar
+     * setelah proses sponsor.
      */
 
-    overlayTitle.textContent =
-      "Terima Kasih";
+    if(!sponsorOpened){
+
+      return;
+
+    }
 
 
-    overlayText.textContent =
-      "Sponsor telah dibuka. " +
-      "Silakan lanjut ke halaman tujuan.";
+    video.play();
 
 
-    sponsorButton.style.display =
-      "none";
-
-
-    playButton.classList.add(
-      "active"
+    overlay.classList.add(
+      "hidden"
     );
 
   }
@@ -855,33 +836,38 @@ sponsorButton.addEventListener(
 
 /*
 ==================================================
-BUKA HALAMAN TUJUAN
+KETIKA VIDEO DI-PAUSE
 ==================================================
 */
 
-playButton.addEventListener(
-  "click",
+video.addEventListener(
+  "pause",
   function(){
 
-    if(!selectedLink){
-      return;
+    if(
+      !video.ended &&
+      selectedVideo &&
+      sponsorOpened
+    ){
+
+      overlay.classList.remove(
+        "hidden"
+      );
+
+      overlayTitle.textContent =
+        selectedVideo.title;
+
+      overlayText.textContent =
+        "Tekan tombol di bawah untuk melanjutkan video.";
+
+      sponsorButton.style.display =
+        "none";
+
+      playButton.classList.add(
+        "active"
+      );
+
     }
-
-
-    if(!sponsorOpened){
-      return;
-    }
-
-
-    /*
-     * Buka target di tab baru
-     */
-
-    window.open(
-      selectedLink.target,
-      "_blank",
-      "noopener,noreferrer"
-    );
 
   }
 );
